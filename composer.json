@@ -3,7 +3,7 @@
     "description": "assetic + twig integration for ZF2 applications",
     "license": "GPL-3.0",
     "keywords": ["assetic", "twig", "zf2", "zendframework", "asset management"],
-    "homepage": "https://github.com/heartsentwined/assetwig",
+    "homepage": "https://github.com/heartsentwined/zf2-assetwig",
     "authors": [
         {
             "name": "heartsentwined",
