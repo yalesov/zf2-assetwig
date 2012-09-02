@@ -1,0 +1,27 @@
+{
+    "name": "heartsentwined/zf2-assetwig",
+    "description": "assetic + twig integration with ZF2 applications",
+    "license": "GPL-3.0",
+    "keywords": ["assetic", "twig", "zf2", "zendframework", "asset management"],
+    "homepage": "https://github.com/heartsentwined/assetwig",
+    "authors": [
+        {
+            "name": "heartsentwined",
+            "email": "heartsentwined@cogito-lab.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "Assetwig": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/yaml": "dev-master",
+        "kriswallsmith/assetic": "dev-master",
+        "twig/twig": "dev-master",
+        "twig/extensions": "dev-master"
+    }
+}
