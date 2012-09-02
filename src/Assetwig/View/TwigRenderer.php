@@ -1,7 +1,6 @@
 <?php
 namespace Assetwig\View;
 
-use ArrayObject;
 use Assetwig\Assetic\Assetic;
 use Assetwig\Twig\Environment;
 use Assetwig\View\TwigResolver;
@@ -138,7 +137,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
             $helper->setCurrent($model);
 
             $vars = $model->getVariables();
-            if ($vars instanceof ArrayObject) {
+            if ($vars instanceof \ArrayObject) {
                 $vars = $vars->getArrayCopy();
             }
 

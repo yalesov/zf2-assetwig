@@ -5,6 +5,6 @@ use Assetwig\Exception;
 
 class RuntimeException
     extends \RuntimeException
-    implements Exception
+    implements ExceptionInterface
 {
 }

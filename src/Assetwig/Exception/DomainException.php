@@ -5,6 +5,6 @@ use Assetwig\Exception;
 
 class DomainException
     extends \DomainException
-    implements Exception
+    implements ExceptionInterface
 {
 }

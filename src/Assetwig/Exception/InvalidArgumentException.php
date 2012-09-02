@@ -5,6 +5,6 @@ use Assetwig\Exception;
 
 class InvalidArgumentException
     extends \InvalidArgumentException
-    implements Exception
+    implements ExceptionInterface
 {
 }

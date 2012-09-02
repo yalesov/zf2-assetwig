@@ -1,6 +1,6 @@
 <?php
 namespace Assetwig;
 
-interface Exception
+interface ExceptionInterface
 {
 }
