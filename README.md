@@ -12,7 +12,7 @@ Use composer. `"minimum-stability": "dev"` is required because `twig/extensions`
 {
     "minimum-stability": "dev",
     "require": {
-        "heartsentwined/zf2-assetwig": "1.1.*"
+        "heartsentwined/zf2-assetwig": "1.0.*"
     }
 }
 ```
