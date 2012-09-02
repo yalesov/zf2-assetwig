@@ -49,7 +49,7 @@ return array(
              * to use them:
              * uncomment them,
              * download yuicompressor and put the jar file in vendor/ ,
-             * install "leafo/lessphp" with composer,
+             * install "leafo/lessphp", "heartsentwined/yuicompressor" with composer,
              * and install java, node, coffee
              */
             'assetwig-assetic' => array(
@@ -69,13 +69,13 @@ return array(
             /*
             'Assetic\Filter\Yui\CssCompressorFilter' => array(
                 'parameters' => array(
-                    'jarPath'   => 'vendor/yuicompressor-2.4.7.jar',
+                    'jarPath'   => 'vendor/heartsentwined/yuicompressor/yuicompressor.jar',
                     'javaPath'  => '/usr/bin/java',
                 ),
             ),
             'Assetic\Filter\Yui\JsCompressorFilter' => array(
                 'parameters' => array(
-                    'jarPath'   => 'vendor/yuicompressor-2.4.7.jar',
+                    'jarPath'   => 'vendor/heartsentwined/yuicompressor/yuicompressor.jar',
                     'javaPath'  => '/usr/bin/java',
                 ),
             ),
