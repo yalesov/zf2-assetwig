@@ -1,5 +1,7 @@
 # zf2-assetwig
 
+v1.1
+
 This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [Twig](http://twig.sensiolabs.org/) to a ZF2 appliation.
 
 # Installation
@@ -10,7 +12,7 @@ Use composer. `"minimum-stability": "dev"` is required because `twig/extensions`
 {
     "minimum-stability": "dev",
     "require": {
-        "heartsentwined/zf2-assetwig": "1.0.*"
+        "heartsentwined/zf2-assetwig": "1.1.*"
     }
 }
 ```
