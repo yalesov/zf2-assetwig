@@ -1,6 +1,6 @@
 # zf2-assetwig
 
-v1.0.1
+v1.0.1 [![Build Status](https://secure.travis-ci.org/heartsentwined/zf2-assetwig.png)](http://travis-ci.org/heartsentwined/zf2-assetwig)
 
 This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [Twig](http://twig.sensiolabs.org/) to a ZF2 appliation.
 
