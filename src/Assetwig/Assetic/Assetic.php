@@ -7,6 +7,7 @@ use Assetic\Extension\Twig\TwigResource;
 use Assetic\Factory\AssetFactory;
 use Assetic\Factory\LazyAssetManager;
 use Assetwig\Twig\Environment;
+use Heartsentwined\ArgValidator\ArgValidator;
 use Zend\ServiceManager\ServiceManager;
 use Zend\ServiceManager\ServiceManagerAwareInterface;
 
@@ -89,6 +90,8 @@ class Assetic implements ServiceManagerAwareInterface
 
     public function setup($name)
     {
+        ArgValidator::assert($name, 'string');
+
         $this->setupFilter();
 
         $am = $this->getLazyAssetManager();

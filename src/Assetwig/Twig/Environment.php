@@ -2,6 +2,7 @@
 namespace Assetwig\Twig;
 
 use Assetwig\Twig\HelperFunction;
+use Heartsentwined\ArgValidator\ArgValidator;
 use Twig_Environment;
 use Twig_ExtensionInterface;
 use Twig_Function_Function as TwigFunction;
@@ -47,6 +48,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
 
     public function setTemplateSuffix($templateSuffix)
     {
+        ArgValidator::assert($templateSuffix, 'string');
         $this->templateSuffix = $templateSuffix;
         return $this;
     }
@@ -79,6 +81,8 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
      */
     public function getFunction($name)
     {
+        ArgValidator::assert($name, 'string');
+
         //try to get the function from the environment itself
         $function = parent::getFunction($name);
         if (false !== $function){
@@ -118,12 +122,16 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
      */
     public function plugin($plugin, array $options = null)
     {
+        ArgValidator::assert($plugin, 'string');
+
         $helper = $this->getHelperPluginManager()->get($plugin, $options);
         return $helper;
     }
 
-    public function render($name, $vars)
+    public function render($name, array $vars = array())
     {
+        ArgValidator($name, 'string');
+
         $this->prepareRender();
         return parent::render($name, $vars);
     }

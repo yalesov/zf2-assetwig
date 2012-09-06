@@ -1,9 +1,10 @@
 <?php
 namespace Assetwig\View;
 
+use Assetwig\View\TwigRenderer;
+use Heartsentwined\ArgValidator\ArgValidator;
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\ListenerAggregateInterface;
-use Assetwig\View\TwigRenderer;
 
 class TwigStrategy implements ListenerAggregateInterface
 {
@@ -23,6 +24,8 @@ class TwigStrategy implements ListenerAggregateInterface
 
     public function attach(EventManagerInterface $events, $priority = null)
     {
+        ArgValidator::assert($priority, array('int', 'null'));
+
         if (null === $priority) {
             $this->listeners[] = $events->attach('renderer', array($this, 'selectRenderer'));
             $this->listeners[] = $events->attach('response', array($this, 'injectResponse'));

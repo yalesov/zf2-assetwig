@@ -1,6 +1,7 @@
 <?php
 namespace Assetwig\Twig;
 
+use Heartsentwined\ArgValidator\ArgValidator;
 use Twig_Function;
 
 class HelperFunction extends Twig_Function
@@ -9,6 +10,7 @@ class HelperFunction extends Twig_Function
 
     public function __construct($name, $options=array())
     {
+        ArgValidator::assert($name, 'string');
         parent::__construct($options);
         $this->name = $name;
     }

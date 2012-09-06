@@ -54,8 +54,10 @@ class Extension extends Twig_Extension implements ServiceManagerAwareInterface
      * @param array $options
      * @return string
      */
-    public function renderAction($expr, $attributes, $options)
+    public function renderAction($expr, array $attributes, array $options)
     {
+        ArgValidator::assert($expr, 'string');
+
         $serviceManager = Module::getServiceManager();
         $application = $serviceManager->get('Application');
         //parse the name of the controller, action and template directory that should be used

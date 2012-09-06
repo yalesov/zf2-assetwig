@@ -5,6 +5,7 @@ use Assetwig\Assetic\Assetic;
 use Assetwig\Twig\Environment;
 use Assetwig\View\TwigResolver;
 use Assetwig\Exception;
+use Heartsentwined\ArgValidator\ArgValidator;
 use Zend\Filter\FilterChain;
 use Zend\View\HelperPluginManager;
 use Zend\View\Model\ModelInterface;
@@ -106,13 +107,16 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
         return $this->getEnvironment()->plugin($name, $options);
     }
 
-    public function partial($nameOrModel, $vars = null)
+    public function partial($nameOrModel, array $vars = null)
     {
         return $this->render($nameOrModel, $vars);
     }
 
-    public function render($nameOrModel, $vars = null)
+    public function render($nameOrModel, array $vars = null)
     {
+        ArgValidator::assert($nameOrModel,
+            array('string', '\Zend\View\Model\ModelInterface'));
+
         if ($nameOrModel instanceof ModelInterface) {
             $model       = $nameOrModel;
             $nameOrModel = $model->getTemplate();
