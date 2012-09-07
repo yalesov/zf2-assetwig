@@ -21,7 +21,9 @@
         "symfony/yaml": "2.0.*",
         "heartsentwined/arg-validator": "1.*",
         "kriswallsmith/assetic": "1.0.*",
-        "twig/twig": "1.9.*",
+        "twig/twig": "1.9.*"
+    }
+    "require-dev": {
         "twig/extensions": "1.0.*"
     }
 }

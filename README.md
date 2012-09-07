@@ -6,11 +6,10 @@ This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [
 
 # Installation
 
-Use composer. `"minimum-stability": "dev"` is required because `twig/extensions` is still in development stage.
+Use composer.
 
 ```json
 {
-    "minimum-stability": "dev",
     "require": {
         "heartsentwined/zf2-assetwig": "1.*"
     }
