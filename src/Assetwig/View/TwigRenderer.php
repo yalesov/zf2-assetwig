@@ -107,15 +107,17 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
         return $this->getEnvironment()->plugin($name, $options);
     }
 
-    public function partial($nameOrModel, array $vars = null)
+    public function partial($nameOrModel, $vars = null)
     {
+        ArgValidator::assert($vars, array('\Traversable', 'null'));
         return $this->render($nameOrModel, $vars);
     }
 
-    public function render($nameOrModel, array $vars = null)
+    public function render($nameOrModel, $vars = null)
     {
         ArgValidator::assert($nameOrModel,
             array('string', '\Zend\View\Model\ModelInterface'));
+        ArgValidator::assert($vars, array('\Traversable', 'null'));
 
         if ($nameOrModel instanceof ModelInterface) {
             $model       = $nameOrModel;
