@@ -29,6 +29,8 @@ di:
             parameters:
                 environment: assetwig-environment
                 assetWriter: assetic-assetwriter
+                am: assetic-am
+                fm: assetic-fm
         assetic-assetwriter:
             parameters:
                 varValues: {}
