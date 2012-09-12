@@ -60,7 +60,18 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
 
     public function setExtensionClasses(array $extensionClasses = array())
     {
-        $this->extensionClasses = $extensionClasses;
+        foreach ($extensionClasses as $identifier => $class) {
+            $this->addExtensionClass($identifier, $class);
+        }
+        return $this;
+    }
+
+    public function addExtensionClass($identifier, $class)
+    {
+        ArgValidator::assert($identifier, 'string');
+        ArgValidator::assert($class, array(
+            '\Twig_ExtensionInterface', 'string'));
+        $this->extensionClasses[$identifier] = $class;
         return $this;
     }
 
@@ -164,8 +175,10 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
     public function configExtension()
     {
         $sm = $this->getServiceManager();
-        foreach ($this->getExtensionClasses() as $extensionName) {
-            $extension = $sm->get($extensionName);
+        foreach ($this->getExtensionClasses() as $extension) {
+            if (!$extension instanceof Twig_ExtensionInterface) {
+                $extension = $sm->get($extension);
+            }
             if ($extension instanceof Twig_ExtensionInterface) {
                 $this->addExtension($extension);
             }

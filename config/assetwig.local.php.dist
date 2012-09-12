@@ -26,12 +26,6 @@ return array(
                     ),
                 ),
             ),
-            'assetic-factory' => array(
-                'parameters' => array(
-                    // root directory for css and js files
-                    'root' => 'asset',
-                ),
-            ),
             'assetic-assetwriter' => array(
                 'parameters' => array(
                     // root directory for writing assets
@@ -39,21 +33,26 @@ return array(
                     'dir' => 'public',
                 ),
             ),
-
-            // filters
-            /* these examples will setup
-             * - yui_css, yui_js with yuicompressor 2.4.7,
-             * - less with less-php
-             * - coffee with node + coffee
-             *
-             * to use them:
-             * uncomment them,
-             * download yuicompressor and put the jar file in vendor/ ,
-             * install "leafo/lessphp", "heartsentwined/yuicompressor" with composer,
-             * and install java, node, coffee
-             */
             'assetwig-assetic' => array(
                 'parameters' => array(
+                    // root directory for css and js files
+                    'root'  => 'asset',
+
+                    // debug mode
+                    'debug' => false,
+
+                    // filters
+                    /* these examples will setup
+                     * - yui_css, yui_js with yuicompressor 2.4.7,
+                     * - less with less-php
+                     * - coffee with node + coffee
+                     *
+                     * to use them:
+                     * uncomment them,
+                     * download yuicompressor and put the jar file in vendor/ ,
+                     * install "leafo/lessphp", "heartsentwined/yuicompressor" with composer,
+                     * and install java, node, coffee
+                     */
                     'filters' => array(
                         // add filters here
                         /*

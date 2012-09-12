@@ -9,12 +9,9 @@ di:
 
             assetwig-assetic: Assetwig\Assetic\Assetic
 
-            assetic-factory: Assetic\Factory\AssetFactory
             assetic-am: Assetic\AssetManager
             assetic-fm: Assetic\FilterManager
-            assetic-lazy-am: Assetic\Factory\LazyAssetManager
             assetic-assetwriter: Assetwig\Assetic\AssetWriter
-            assetic-extension: Assetic\Extension\Twig\AsseticExtension
         assetwig-strategy:
             parameters:
                 renderer: Assetwig\View\TwigRenderer
@@ -28,25 +25,10 @@ di:
                 options: {}
                 extensionClasses:
                     Assetwig: assetwig-extension
-                    Assetic: assetic-extension
         assetwig-assetic:
             parameters:
                 environment: assetwig-environment
-                lazyAssetManager: assetic-lazy-am
                 assetWriter: assetic-assetwriter
-                factory: assetic-factory
-        assetic-extension:
-            parameters:
-                factory: assetic-factory
-                functions: {}
-        assetic-factory:
-            parameters:
-                am: assetic-am
-                fm: assetic-fm
-        assetic-lazy-am:
-            parameters:
-                factory: assetic-factory
-                loaders: {}
         assetic-assetwriter:
             parameters:
                 varValues: {}
