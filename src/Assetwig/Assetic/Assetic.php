@@ -3,6 +3,7 @@ namespace Assetwig\Assetic;
 
 use Assetic\AssetManager;
 use Assetic\AssetWriter;
+use Assetic\Extension\Twig\AsseticExtension;
 use Assetic\Extension\Twig\TwigFormulaLoader;
 use Assetic\Extension\Twig\TwigResource;
 use Assetic\Factory\AssetFactory;
