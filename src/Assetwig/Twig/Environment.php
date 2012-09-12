@@ -130,7 +130,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
 
     public function render($name, array $vars = array())
     {
-        ArgValidator($name, 'string');
+        ArgValidator::assert($name, 'string');
 
         $this->prepareRender();
         return parent::render($name, $vars);
