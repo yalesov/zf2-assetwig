@@ -9,23 +9,20 @@ use Heartsentwined\ArgValidator\ArgValidator;
 class AssetWriter extends BaseAssetWriter
 {
     protected $dir;
-    protected $varValues;
 
-    public function __construct($dir, array $varValues = array())
+    public function __construct($dir)
     {
         ArgValidator::assert($dir, 'string');
         $this->dir = $dir;
-        parent::__construct($dir, $varValues);
     }
 
     public function writeManagerAssets(AssetManager $am)
     {
         foreach ($am->getNames() as $name) {
             $asset = $am->get($name);
-            $targetPath = $this->dir.'/'.PathUtils::resolvePath(
-                $asset->getTargetPath(), $asset->getVars(), $asset->getValues());
-            if (!file_exists($targetPath)
-                || filemtime($targetPath) < $asset->getLastModified()) {
+            $path = $this->dir . '/' . $asset->getTargetPath();
+            if (!file_exists($path)
+                || filemtime($path) < $asset->getLastModified()) {
                 $this->writeAsset($asset);
             }
         }
