@@ -14,6 +14,7 @@ class AssetWriter extends BaseAssetWriter
     {
         ArgValidator::assert($dir, 'string');
         $this->dir = $dir;
+        parent::__construct($dir);
     }
 
     public function writeManagerAssets(AssetManager $am)
