@@ -1,7 +1,7 @@
 <?php
 namespace Assetwig;
 
-use Symfony\Component\Yaml\Yaml;
+use Heartsentwined\Yaml\Yaml;
 
 class Module
 {
