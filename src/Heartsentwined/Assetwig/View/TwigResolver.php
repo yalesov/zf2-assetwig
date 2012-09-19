@@ -1,8 +1,8 @@
 <?php
-namespace Assetwig\View;
+namespace Heartsentwined\Assetwig\View;
 
-use Assetwig\Exception;
 use Heartsentwined\ArgValidator\ArgValidator;
+use Heartsentwined\Assetwig\Exception;
 use Zend\View\Resolver\AggregateResolver;
 use Twig_LoaderInterface as LoaderInterface;
 

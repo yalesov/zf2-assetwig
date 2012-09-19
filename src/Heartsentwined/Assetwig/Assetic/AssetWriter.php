@@ -1,5 +1,5 @@
 <?php
-namespace Assetwig\Assetic;
+namespace Heartsentwined\Assetwig\Assetic;
 
 use Assetic\AssetWriter as BaseAssetWriter;
 use Assetic\AssetManager;

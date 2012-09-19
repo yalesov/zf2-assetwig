@@ -1,7 +1,7 @@
 <?php
-namespace Assetwig\Twig\Extension\Render;
+namespace Heartsentwined\Assetwig\Twig\Extension\Render;
 
-use Assetwig\Twig\Extension\Render\RenderNode;
+use Heartsentwined\Assetwig\Twig\Extension\Render\RenderNode;
 use Twig_TokenParser;
 use Twig_Token as Token;
 use Twig_Node_Expression_Array as ExpressionArray;

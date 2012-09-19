@@ -1,5 +1,5 @@
 <?php
-namespace Assetwig\Twig;
+namespace Heartsentwined\Assetwig\Twig;
 
 use Heartsentwined\ArgValidator\ArgValidator;
 use Twig_Function;

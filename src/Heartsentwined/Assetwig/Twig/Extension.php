@@ -1,7 +1,7 @@
 <?php
-namespace Assetwig\Twig;
+namespace Heartsentwined\Assetwig\Twig;
 
-use Assetwig\Twig\Extension\Render\TokenParser as RenderTokenParser;
+use Heartsentwined\Assetwig\Twig\Extension\Render\TokenParser as RenderTokenParser;
 use Twig_Extension;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Http\Response;

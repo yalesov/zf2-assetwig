@@ -24,3 +24,7 @@ Then add `Assetwig` to the `modules` key in `(app root)/config/application.confi
 # Config
 
 Copy `config/assetwig.local.php.dist` to `(app root)/config/autoload/assetwig.local.php`, and modify the settings. Instructions included in config file.
+
+# Usage
+
+todo

@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Assetwig": "src/"
+            "Heartsentwined\\Assetwig": "src/"
         }
     },
     "require": {

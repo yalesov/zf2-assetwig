@@ -1,11 +1,11 @@
 <?php
-namespace Assetwig\View;
+namespace Heartsentwined\Assetwig\View;
 
-use Assetwig\Assetic\Assetic;
-use Assetwig\Twig\Environment;
-use Assetwig\View\TwigResolver;
-use Assetwig\Exception;
 use Heartsentwined\ArgValidator\ArgValidator;
+use Heartsentwined\Assetwig\Assetic\Assetic;
+use Heartsentwined\Assetwig\Twig\Environment;
+use Heartsentwined\Assetwig\View\TwigResolver;
+use Heartsentwined\Assetwig\Exception;
 use Zend\Filter\FilterChain;
 use Zend\View\HelperPluginManager;
 use Zend\View\Model\ModelInterface;

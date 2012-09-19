@@ -1,5 +1,5 @@
 <?php
-namespace Assetwig\Twig\Extension\Render;
+namespace Heartsentwined\Assetwig\Twig\Extension\Render;
 
 use Twig_Node as Node;
 use Twig_Node_Expression as Expression;

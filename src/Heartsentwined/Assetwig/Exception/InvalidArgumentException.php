@@ -1,7 +1,7 @@
 <?php
-namespace Assetwig\Exception;
+namespace Heartsentwined\Assetwig\Exception;
 
-use Assetwig\ExceptionInterface;
+use Heartsentwined\Assetwig\ExceptionInterface;
 
 class InvalidArgumentException
     extends \InvalidArgumentException
