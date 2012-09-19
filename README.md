@@ -14,7 +14,7 @@ This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [
 {
     "minimum-stability": "dev",
     "require": {
-        "heartsentwined/zf2-assetwig": "1.*"
+        "heartsentwined/zf2-assetwig": "2.*"
     }
 }
 ```
