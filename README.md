@@ -19,7 +19,7 @@ This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [
 }
 ```
 
-Then add `Assetwig` to the `modules` key in `(app root)/config/application.config.yml`
+Then add `Heartsentwined\Assetwig` to the `modules` key in `(app root)/config/application.config.yml`
 
 # Config
 
