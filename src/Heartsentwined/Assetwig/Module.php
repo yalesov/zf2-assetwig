@@ -7,6 +7,6 @@ class Module
 {
     public function getConfig()
     {
-        return Yaml::parse(__DIR__ . '/../../config/module.config.yml');
+        return Yaml::parse(__DIR__ . '/../../../config/module.config.yml');
     }
 }
