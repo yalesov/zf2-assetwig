@@ -24,6 +24,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
     public function setHelperPluginManager(HelperPluginManager $hpm)
     {
         $this->hpm = $hpm;
+
         return $this;
     }
 
@@ -32,12 +33,14 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
         if (null === $this->hpm) {
             $this->hpm = $this->getServiceManager()->get('view_manager')->getHelperManager();
         }
+
         return $this->hpm;
     }
 
     public function setServiceManager(ServiceManager $serviceManager)
     {
         $this->sm = $serviceManager;
+
         return $this;
     }
 
@@ -50,6 +53,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
     {
         ArgValidator::assert($templateSuffix, 'string');
         $this->templateSuffix = $templateSuffix;
+
         return $this;
     }
 
@@ -63,6 +67,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
         foreach ($extensionClasses as $identifier => $class) {
             $this->addExtensionClass($identifier, $class);
         }
+
         return $this;
     }
 
@@ -72,6 +77,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
         ArgValidator::assert($class, array(
             '\Twig_ExtensionInterface', 'string'));
         $this->extensionClasses[$identifier] = $class;
+
         return $this;
     }
 
@@ -96,19 +102,20 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
 
         //try to get the function from the environment itself
         $function = parent::getFunction($name);
-        if (false !== $function){
+        if (false !== $function) {
             return $function;
         }
 
         //if not found, try to get it from  the broker and define it in the environment for later usage
-        try{
+        try {
             $helper = $this->plugin($name,array());
-            if (null !== $helper){
+            if (null !== $helper) {
                 $function = new HelperFunction($name, array('is_safe' => array('html')));
                 $this->addFunction($name, $function);
+
                 return $function;
             }
-        }catch(\Exception $exception){
+        } catch (\Exception $exception) {
             // ignore the exception and try to use a defined PHP function
         }
 
@@ -117,6 +124,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
         if ( function_exists($name) || in_array($name, $constructs) ) {
             $function = new TwigFunction($name);
             $this->addFunction($name, $function);
+
             return $function;
         }
 
@@ -136,6 +144,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
         ArgValidator::assert($plugin, 'string');
 
         $helper = $this->getHelperPluginManager()->get($plugin, $options);
+
         return $helper;
     }
 
@@ -144,6 +153,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
         ArgValidator::assert($name, 'string');
 
         $this->prepareRender();
+
         return parent::render($name, $vars);
     }
 
@@ -169,6 +179,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
             }
             $loader->attach($resolver);
         }
+
         return $this;
     }
 
@@ -183,6 +194,7 @@ class Environment extends Twig_Environment implements ServiceManagerAwareInterfa
                 $this->addExtension($extension);
             }
         }
+
         return $this;
     }
 }

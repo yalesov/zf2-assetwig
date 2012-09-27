@@ -23,6 +23,7 @@ class HelperFunction extends Twig_Function
     public function compile()
     {
         $name = preg_replace('#[^a-z0-9]+#i', '', $this->name);
+
         return '$this->getEnvironment()->plugin("' . $name . '")->__invoke';
     }
 }

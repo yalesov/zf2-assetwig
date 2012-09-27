@@ -19,6 +19,7 @@ class Extension extends Twig_Extension implements ServiceManagerAwareInterface
     public function setServiceManager(ServiceManager $serviceManager)
     {
         $this->sm = $serviceManager;
+
         return $this;
     }
 
@@ -49,9 +50,9 @@ class Extension extends Twig_Extension implements ServiceManagerAwareInterface
 
     /**
      * Render an action from a controller and render it's associated template
-     * @param string $expr
-     * @param array $attributes
-     * @param array $options
+     * @param  string $expr
+     * @param  array  $attributes
+     * @param  array  $options
      * @return string
      */
     public function renderAction($expr, array $attributes, array $options)
@@ -102,7 +103,7 @@ class Extension extends Twig_Extension implements ServiceManagerAwareInterface
         }
 
         //if the response is an instance of ViewModel then render that one
-        if ($response instanceof ModelInterface){
+        if ($response instanceof ModelInterface) {
             $viewModel = $response;
         }elseif ($response === null
                 || is_array($response)
@@ -110,7 +111,7 @@ class Extension extends Twig_Extension implements ServiceManagerAwareInterface
                 || $response instanceof \Traversable) {
             $viewModel = new ViewModel($response);
             $viewModel->setTemplate($templateDir . $actionName);
-        }else{
+        } else {
             return '';
         }
         $viewModel->terminate();
@@ -118,6 +119,7 @@ class Extension extends Twig_Extension implements ServiceManagerAwareInterface
 
         $view = $serviceManager->get('Zend\View\View');
         $output = $view->render($viewModel);
+
         return $output;
     }
 }

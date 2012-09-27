@@ -2,7 +2,6 @@
 namespace Heartsentwined\Assetwig\Twig\Extension\Render;
 
 use Twig_Node as Node;
-use Twig_Node_Expression as Expression;
 use Twig_Compiler as Compiler;
 
 class RenderNode extends Node

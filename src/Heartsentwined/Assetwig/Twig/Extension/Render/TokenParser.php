@@ -20,6 +20,7 @@ class TokenParser extends Twig_TokenParser
         }
         $options = new ExpressionArray(array(), $token->getLine());
         $this->parser->getStream()->expect(Token::BLOCK_END_TYPE);
+
         return new RenderNode(array(
             'expr'          => $expr,
             'attributes'    => $attributes,

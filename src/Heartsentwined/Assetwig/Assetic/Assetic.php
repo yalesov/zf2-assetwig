@@ -32,6 +32,7 @@ class Assetic implements ServiceManagerAwareInterface
     public function setEnvironment(Environment $environment)
     {
         $this->environment = $environment;
+
         return $this;
     }
 
@@ -43,6 +44,7 @@ class Assetic implements ServiceManagerAwareInterface
     public function setAssetWriter(AssetWriter $assetWriter)
     {
         $this->assetWriter = $assetWriter;
+
         return $this;
     }
 
@@ -54,6 +56,7 @@ class Assetic implements ServiceManagerAwareInterface
     public function setLazyAssetManager(LazyAssetManager $lazyAm)
     {
         $this->lazyAm = $lazyAm;
+
         return $this;
     }
 
@@ -65,6 +68,7 @@ class Assetic implements ServiceManagerAwareInterface
     public function setServiceManager(ServiceManager $serviceManager)
     {
         $this->sm = $serviceManager;
+
         return $this;
     }
 
@@ -76,6 +80,7 @@ class Assetic implements ServiceManagerAwareInterface
     public function setAssetManager(AssetManager $am)
     {
         $this->am = $am;
+
         return $this;
     }
 
@@ -87,6 +92,7 @@ class Assetic implements ServiceManagerAwareInterface
     public function setFilterManager(FilterManager $fm)
     {
         $this->fm = $fm;
+
         return $this;
     }
 
@@ -99,6 +105,7 @@ class Assetic implements ServiceManagerAwareInterface
     {
         ArgValidator::assert($root, 'string');
         $this->root = $root;
+
         return $this;
     }
 
@@ -109,18 +116,20 @@ class Assetic implements ServiceManagerAwareInterface
 
     public function setDebug($debug)
     {
-        $this->debug = (bool)$debug;
+        $this->debug = (bool) $debug;
+
         return $this;
     }
 
     public function getDebug()
     {
-        return (bool)$this->debug;
+        return (bool) $this->debug;
     }
 
     public function setFilters(array $filters = array())
     {
         $this->filters = $filters;
+
         return $this;
     }
 

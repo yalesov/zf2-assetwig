@@ -3,7 +3,6 @@ namespace Heartsentwined\Assetwig\Assetic;
 
 use Assetic\AssetWriter as BaseAssetWriter;
 use Assetic\AssetManager;
-use Assetic\Util\PathUtils;
 use Heartsentwined\ArgValidator\ArgValidator;
 
 class AssetWriter extends BaseAssetWriter

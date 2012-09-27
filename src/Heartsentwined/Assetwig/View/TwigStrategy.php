@@ -19,6 +19,7 @@ class TwigStrategy implements ListenerAggregateInterface
     public function setRenderer(TwigRenderer $renderer)
     {
         $this->renderer = $renderer;
+
         return $this;
     }
 

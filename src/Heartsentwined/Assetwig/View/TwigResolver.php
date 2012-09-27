@@ -15,6 +15,7 @@ class TwigResolver extends AggregateResolver implements LoaderInterface
         if (!$path) {
             throw new Exception\DomainException(sprintf('Template "%s" not found.', $name));
         }
+
         return file_get_contents($path);
     }
 
@@ -22,6 +23,7 @@ class TwigResolver extends AggregateResolver implements LoaderInterface
     {
         ArgValidator::assert($name, 'string');
         $path = $this->resolve($name);
+
         return $path;
     }
 
@@ -34,6 +36,7 @@ class TwigResolver extends AggregateResolver implements LoaderInterface
         if (!$path) {
             return false;
         }
+
         return filemtime($path) < $time;
     }
 }

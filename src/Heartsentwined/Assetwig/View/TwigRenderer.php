@@ -4,7 +4,6 @@ namespace Heartsentwined\Assetwig\View;
 use Heartsentwined\ArgValidator\ArgValidator;
 use Heartsentwined\Assetwig\Assetic\Assetic;
 use Heartsentwined\Assetwig\Twig\Environment;
-use Heartsentwined\Assetwig\View\TwigResolver;
 use Heartsentwined\Assetwig\Exception;
 use Zend\Filter\FilterChain;
 use Zend\View\HelperPluginManager;
@@ -25,6 +24,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
     public function setEnvironment(Environment $environment)
     {
         $this->environment = $environment;
+
         return $this;
     }
 
@@ -36,6 +36,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
     public function setAssetic(Assetic $assetic)
     {
         $this->assetic = $assetic;
+
         return $this;
     }
 
@@ -47,6 +48,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
     public function setResolver(ResolverInterface $resolver)
     {
         $this->getEnvironment()->setLoader($resolver);
+
         return $this;
     }
 
@@ -73,12 +75,14 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
         if ($this->getEnvironment()) {
             $this->getEnvironment()->setHelperPluginManager($hpm);
         }
+
         return $this;
     }
 
     public function setFilterChain(FilterChain $filterChain)
     {
         $this->filterChain = $filterChain;
+
         return $this;
     }
 
@@ -87,12 +91,14 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
         if (null === $this->filterChain) {
             $this->setFilterChain(new FilterChain());
         }
+
         return $this->filterChain;
     }
 
     public function setCanRenderTrees($renderTrees)
     {
         $this->renderTrees = (bool) $renderTrees;
+
         return $this;
     }
 
@@ -110,6 +116,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
     public function partial($nameOrModel, $vars = null)
     {
         ArgValidator::assert($vars, array('\Traversable', 'null'));
+
         return $this->render($nameOrModel, $vars);
     }
 
@@ -161,6 +168,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
         $this->getAssetic()->setup($nameOrModel);
 
         $output = $this->getEnvironment()->render($nameOrModel,$vars);
+
         return $this->getFilterChain()->filter($output);
     }
 
@@ -170,6 +178,7 @@ class TwigRenderer implements RendererInterface, TreeRendererInterface
         if (is_callable($helper)) {
             return call_user_func_array($helper, $argv);
         }
+
         return $helper;
     }
 
