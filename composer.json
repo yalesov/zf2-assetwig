@@ -22,6 +22,6 @@
         "heartsentwined/arg-validator": "1.*",
         "kriswallsmith/assetic": "1.0.*",
         "twig/twig": "1.9.*",
-        "twig/extensions": "1.0.*"
+        "twig/extensions": "1.0.*@dev"
     }
 }
