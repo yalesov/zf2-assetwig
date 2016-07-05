@@ -1,5 +1,5 @@
 <?php
-namespace Heartsentwined\Assetwig\Twig\Extension\Render;
+namespace Yalesov\Assetwig\Twig\Extension\Render;
 
 use Twig_Node as Node;
 use Twig_Compiler as Compiler;

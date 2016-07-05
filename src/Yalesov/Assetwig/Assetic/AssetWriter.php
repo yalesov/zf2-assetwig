@@ -1,9 +1,9 @@
 <?php
-namespace Heartsentwined\Assetwig\Assetic;
+namespace Yalesov\Assetwig\Assetic;
 
 use Assetic\AssetWriter as BaseAssetWriter;
 use Assetic\AssetManager;
-use Heartsentwined\ArgValidator\ArgValidator;
+use Yalesov\ArgValidator\ArgValidator;
 
 class AssetWriter extends BaseAssetWriter
 {

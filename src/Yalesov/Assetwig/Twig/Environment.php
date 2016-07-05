@@ -1,8 +1,8 @@
 <?php
-namespace Heartsentwined\Assetwig\Twig;
+namespace Yalesov\Assetwig\Twig;
 
-use Heartsentwined\ArgValidator\ArgValidator;
-use Heartsentwined\Assetwig\Twig\HelperFunction;
+use Yalesov\ArgValidator\ArgValidator;
+use Yalesov\Assetwig\Twig\HelperFunction;
 use Twig_Environment;
 use Twig_ExtensionInterface;
 use Twig_Function_Function as TwigFunction;

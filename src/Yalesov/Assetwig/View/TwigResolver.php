@@ -1,8 +1,8 @@
 <?php
-namespace Heartsentwined\Assetwig\View;
+namespace Yalesov\Assetwig\View;
 
-use Heartsentwined\ArgValidator\ArgValidator;
-use Heartsentwined\Assetwig\Exception;
+use Yalesov\ArgValidator\ArgValidator;
+use Yalesov\Assetwig\Exception;
 use Zend\View\Resolver\AggregateResolver;
 use Twig_LoaderInterface as LoaderInterface;
 

@@ -1,10 +1,10 @@
 <?php
-namespace Heartsentwined\Assetwig\View;
+namespace Yalesov\Assetwig\View;
 
-use Heartsentwined\ArgValidator\ArgValidator;
-use Heartsentwined\Assetwig\Assetic\Assetic;
-use Heartsentwined\Assetwig\Twig\Environment;
-use Heartsentwined\Assetwig\Exception;
+use Yalesov\ArgValidator\ArgValidator;
+use Yalesov\Assetwig\Assetic\Assetic;
+use Yalesov\Assetwig\Twig\Environment;
+use Yalesov\Assetwig\Exception;
 use Zend\Filter\FilterChain;
 use Zend\View\HelperPluginManager;
 use Zend\View\Model\ModelInterface;

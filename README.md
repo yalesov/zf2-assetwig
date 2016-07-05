@@ -1,6 +1,6 @@
 # zf2-assetwig
 
-[![Build Status](https://secure.travis-ci.org/heartsentwined/zf2-assetwig.png)](http://travis-ci.org/heartsentwined/zf2-assetwig)
+[![Build Status](https://secure.travis-ci.org/yalesov/zf2-assetwig.png)](http://travis-ci.org/yalesov/zf2-assetwig)
 
 This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [Twig](http://twig.sensiolabs.org/) to a ZF2 appliation.
 
@@ -14,12 +14,12 @@ This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [
 {
     "minimum-stability": "dev",
     "require": {
-        "heartsentwined/zf2-assetwig": "2.*"
+        "yalesov/zf2-assetwig": "2.*"
     }
 }
 ```
 
-Then add `Heartsentwined\Assetwig` to the `modules` key in `(app root)/config/application.config.*`
+Then add `Yalesov\Assetwig` to the `modules` key in `(app root)/config/application.config.*`
 
 # Config
 

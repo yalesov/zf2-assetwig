@@ -1,5 +1,5 @@
 <?php
-namespace Heartsentwined\Assetwig\Assetic;
+namespace Yalesov\Assetwig\Assetic;
 
 use Assetic\AssetManager;
 use Assetic\AssetWriter;
@@ -9,8 +9,8 @@ use Assetic\Extension\Twig\TwigResource;
 use Assetic\Factory\AssetFactory;
 use Assetic\Factory\LazyAssetManager;
 use Assetic\FilterManager;
-use Heartsentwined\ArgValidator\ArgValidator;
-use Heartsentwined\Assetwig\Twig\Environment;
+use Yalesov\ArgValidator\ArgValidator;
+use Yalesov\Assetwig\Twig\Environment;
 use Zend\ServiceManager\ServiceManager;
 use Zend\ServiceManager\ServiceManagerAwareInterface;
 

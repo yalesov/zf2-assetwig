@@ -1,7 +1,7 @@
 <?php
-namespace Heartsentwined\Assetwig;
+namespace Yalesov\Assetwig;
 
-use Heartsentwined\Yaml\Yaml;
+use Yalesov\Yaml\Yaml;
 
 class Module
 {

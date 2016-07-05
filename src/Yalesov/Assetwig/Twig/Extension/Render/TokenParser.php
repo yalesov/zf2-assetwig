@@ -1,7 +1,7 @@
 <?php
-namespace Heartsentwined\Assetwig\Twig\Extension\Render;
+namespace Yalesov\Assetwig\Twig\Extension\Render;
 
-use Heartsentwined\Assetwig\Twig\Extension\Render\RenderNode;
+use Yalesov\Assetwig\Twig\Extension\Render\RenderNode;
 use Twig_TokenParser;
 use Twig_Token as Token;
 use Twig_Node_Expression_Array as ExpressionArray;

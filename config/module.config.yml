@@ -1,21 +1,21 @@
 di:
     instance:
         alias:
-            assetwig-strategy: Heartsentwined\Assetwig\View\TwigStrategy
-            assetwig-environment: Heartsentwined\Assetwig\Twig\Environment
-            assetwig-resolver: Heartsentwined\Assetwig\View\TwigResolver
-            assetwig-extension: Heartsentwined\Assetwig\Twig\Extension
+            assetwig-strategy: Yalesov\Assetwig\View\TwigStrategy
+            assetwig-environment: Yalesov\Assetwig\Twig\Environment
+            assetwig-resolver: Yalesov\Assetwig\View\TwigResolver
+            assetwig-extension: Yalesov\Assetwig\Twig\Extension
             # for some reason can't use alias for TwigRenderer
 
-            assetwig-assetic: Heartsentwined\Assetwig\Assetic\Assetic
+            assetwig-assetic: Yalesov\Assetwig\Assetic\Assetic
 
             assetic-am: Assetic\AssetManager
             assetic-fm: Assetic\FilterManager
-            assetic-assetwriter: Heartsentwined\Assetwig\Assetic\AssetWriter
+            assetic-assetwriter: Yalesov\Assetwig\Assetic\AssetWriter
         assetwig-strategy:
             parameters:
-                renderer: Heartsentwined\Assetwig\View\TwigRenderer
-        Heartsentwined\Assetwig\View\TwigRenderer:
+                renderer: Yalesov\Assetwig\View\TwigRenderer
+        Yalesov\Assetwig\View\TwigRenderer:
             parameters:
                 environment: assetwig-environment
                 assetic: assetwig-assetic
@@ -36,4 +36,4 @@ di:
                 varValues: {}
 view_manager:
     strategies:
-        assetwig: Heartsentwined\Assetwig\View\TwigStrategy
+        assetwig: Yalesov\Assetwig\View\TwigStrategy

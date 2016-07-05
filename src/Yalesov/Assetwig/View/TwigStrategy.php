@@ -1,8 +1,8 @@
 <?php
-namespace Heartsentwined\Assetwig\View;
+namespace Yalesov\Assetwig\View;
 
-use Heartsentwined\ArgValidator\ArgValidator;
-use Heartsentwined\Assetwig\View\TwigRenderer;
+use Yalesov\ArgValidator\ArgValidator;
+use Yalesov\Assetwig\View\TwigRenderer;
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\ListenerAggregateInterface;
 

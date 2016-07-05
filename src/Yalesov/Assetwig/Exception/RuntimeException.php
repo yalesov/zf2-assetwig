@@ -1,7 +1,7 @@
 <?php
-namespace Heartsentwined\Assetwig\Exception;
+namespace Yalesov\Assetwig\Exception;
 
-use Heartsentwined\Assetwig\ExceptionInterface;
+use Yalesov\Assetwig\ExceptionInterface;
 
 class RuntimeException
     extends \RuntimeException

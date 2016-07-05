@@ -1,5 +1,5 @@
 <?php
-namespace Heartsentwined\Assetwig;
+namespace Yalesov\Assetwig;
 
 interface ExceptionInterface
 {
