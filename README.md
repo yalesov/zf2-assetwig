@@ -14,7 +14,7 @@ This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [
 {
     "minimum-stability": "dev",
     "require": {
-        "yalesov/zf2-assetwig": "2.*"
+        "yalesov/zf2-assetwig": "3.*"
     }
 }
 ```
