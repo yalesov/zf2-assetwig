@@ -12,10 +12,10 @@ This module integrates [Assetic](https://github.com/kriswallsmith/assetic) and [
 
 ```json
 {
-    "minimum-stability": "dev",
-    "require": {
-        "yalesov/zf2-assetwig": "3.*"
-    }
+  "minimum-stability": "dev",
+  "require": {
+    "yalesov/zf2-assetwig": "3.*"
+  }
 }
 ```
 
