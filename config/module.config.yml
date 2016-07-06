@@ -1,39 +1,39 @@
 di:
-    instance:
-        alias:
-            assetwig-strategy: Yalesov\Assetwig\View\TwigStrategy
-            assetwig-environment: Yalesov\Assetwig\Twig\Environment
-            assetwig-resolver: Yalesov\Assetwig\View\TwigResolver
-            assetwig-extension: Yalesov\Assetwig\Twig\Extension
-            # for some reason can't use alias for TwigRenderer
+  instance:
+    alias:
+      assetwig-strategy: Yalesov\Assetwig\View\TwigStrategy
+      assetwig-environment: Yalesov\Assetwig\Twig\Environment
+      assetwig-resolver: Yalesov\Assetwig\View\TwigResolver
+      assetwig-extension: Yalesov\Assetwig\Twig\Extension
+      # for some reason can't use alias for TwigRenderer
 
-            assetwig-assetic: Yalesov\Assetwig\Assetic\Assetic
+      assetwig-assetic: Yalesov\Assetwig\Assetic\Assetic
 
-            assetic-am: Assetic\AssetManager
-            assetic-fm: Assetic\FilterManager
-            assetic-assetwriter: Yalesov\Assetwig\Assetic\AssetWriter
-        assetwig-strategy:
-            parameters:
-                renderer: Yalesov\Assetwig\View\TwigRenderer
-        Yalesov\Assetwig\View\TwigRenderer:
-            parameters:
-                environment: assetwig-environment
-                assetic: assetwig-assetic
-        assetwig-environment:
-            parameters:
-                loader: assetwig-resolver
-                options: {}
-                extensionClasses:
-                    Assetwig: assetwig-extension
-        assetwig-assetic:
-            parameters:
-                environment: assetwig-environment
-                assetWriter: assetic-assetwriter
-                am: assetic-am
-                fm: assetic-fm
-        assetic-assetwriter:
-            parameters:
-                varValues: {}
+      assetic-am: Assetic\AssetManager
+      assetic-fm: Assetic\FilterManager
+      assetic-assetwriter: Yalesov\Assetwig\Assetic\AssetWriter
+    assetwig-strategy:
+      parameters:
+        renderer: Yalesov\Assetwig\View\TwigRenderer
+    Yalesov\Assetwig\View\TwigRenderer:
+      parameters:
+        environment: assetwig-environment
+        assetic: assetwig-assetic
+    assetwig-environment:
+      parameters:
+        loader: assetwig-resolver
+        options: {}
+        extensionClasses:
+          Assetwig: assetwig-extension
+    assetwig-assetic:
+      parameters:
+        environment: assetwig-environment
+        assetWriter: assetic-assetwriter
+        am: assetic-am
+        fm: assetic-fm
+    assetic-assetwriter:
+      parameters:
+        varValues: {}
 view_manager:
-    strategies:
-        assetwig: Yalesov\Assetwig\View\TwigStrategy
+  strategies:
+    assetwig: Yalesov\Assetwig\View\TwigStrategy

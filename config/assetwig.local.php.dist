@@ -1,90 +1,90 @@
 <?php
 return array(
-    'di' => array(
-        'instance' => array(
-            'assetwig-environment' => array(
-                'parameters' => array(
-                    'options' => array(
-                        // these two should be off in production environments
-                        // but make sure you pre-generate all templates
-                        'auto_reload'   => true,
-                        'debug'         => true,
-                        // directory for cache files.
-                        // create if dir doesn't exist
-                        //
-                        // make sure
-                        // 1) that www-data
-                        // (or whatever user your PHP executes as)
-                        // has write access to this dir
-                        // 2) or, chmod 0777 this dir if you're lazy
-                        // 3) or, pre-generate all your template files
-                        'cache'         => 'data/cache/twig',
-                    ),
-                    'extensionClasses' => array(
-                        // key not important, just to avoid duplication
-                        'I18n' => 'Twig_Extensions_Extension_I18n',
-                    ),
-                ),
-            ),
-            'assetic-assetwriter' => array(
-                'parameters' => array(
-                    // root directory for writing assets
-                    // see note above about directory write access
-                    'dir' => 'public',
-                ),
-            ),
-            'assetwig-assetic' => array(
-                'parameters' => array(
-                    // root directory for css and js files
-                    'root'  => 'asset',
-
-                    // debug mode
-                    'debug' => false,
-
-                    // filters
-                    /* these examples will setup
-                     * - yui_css, yui_js with yuicompressor 2.4.7,
-                     * - less with less-php
-                     * - coffee with node + coffee
-                     *
-                     * to use them:
-                     * uncomment them,
-                     * download yuicompressor and put the jar file in vendor/ ,
-                     * install "leafo/lessphp", "yalesov/yuicompressor" with composer,
-                     * and install java, node, coffee
-                     */
-                    'filters' => array(
-                        // add filters here
-                        /*
-                        'yui_css'   => 'Assetic\Filter\Yui\CssCompressorFilter',
-                        'yui_js'    => 'Assetic\Filter\Yui\JsCompressorFilter',
-                        'less'      => 'Assetic\Filter\LessphpFilter',
-                        'coffee'    => 'Assetic\Filter\CoffeeScriptFilter',
-                         */
-                    ),
-                ),
-            ),
-            // and add injections here
-            /*
-            'Assetic\Filter\Yui\CssCompressorFilter' => array(
-                'parameters' => array(
-                    'jarPath'   => 'vendor/yalesov/yuicompressor/yuicompressor.jar',
-                    'javaPath'  => '/usr/bin/java',
-                ),
-            ),
-            'Assetic\Filter\Yui\JsCompressorFilter' => array(
-                'parameters' => array(
-                    'jarPath'   => 'vendor/yalesov/yuicompressor/yuicompressor.jar',
-                    'javaPath'  => '/usr/bin/java',
-                ),
-            ),
-            'Assetic\Filter\CoffeeScriptFilter' => array(
-                'parameters' => array(
-                    'coffeePath'    => '/usr/bin/coffee',
-                    'nodePath'      => '/usr/bin/node',
-                ),
-            ),
-             */
+  'di' => array(
+    'instance' => array(
+      'assetwig-environment' => array(
+        'parameters' => array(
+          'options' => array(
+            // these two should be off in production environments
+            // but make sure you pre-generate all templates
+            'auto_reload'   => true,
+            'debug'     => true,
+            // directory for cache files.
+            // create if dir doesn't exist
+            //
+            // make sure
+            // 1) that www-data
+            // (or whatever user your PHP executes as)
+            // has write access to this dir
+            // 2) or, chmod 0777 this dir if you're lazy
+            // 3) or, pre-generate all your template files
+            'cache'     => 'data/cache/twig',
+          ),
+          'extensionClasses' => array(
+            // key not important, just to avoid duplication
+            'I18n' => 'Twig_Extensions_Extension_I18n',
+          ),
         ),
+      ),
+      'assetic-assetwriter' => array(
+        'parameters' => array(
+          // root directory for writing assets
+          // see note above about directory write access
+          'dir' => 'public',
+        ),
+      ),
+      'assetwig-assetic' => array(
+        'parameters' => array(
+          // root directory for css and js files
+          'root'  => 'asset',
+
+          // debug mode
+          'debug' => false,
+
+          // filters
+          /* these examples will setup
+           * - yui_css, yui_js with yuicompressor 2.4.7,
+           * - less with less-php
+           * - coffee with node + coffee
+           *
+           * to use them:
+           * uncomment them,
+           * download yuicompressor and put the jar file in vendor/ ,
+           * install "leafo/lessphp", "yalesov/yuicompressor" with composer,
+           * and install java, node, coffee
+           */
+          'filters' => array(
+            // add filters here
+            /*
+            'yui_css'   => 'Assetic\Filter\Yui\CssCompressorFilter',
+            'yui_js'  => 'Assetic\Filter\Yui\JsCompressorFilter',
+            'less'    => 'Assetic\Filter\LessphpFilter',
+            'coffee'  => 'Assetic\Filter\CoffeeScriptFilter',
+             */
+          ),
+        ),
+      ),
+      // and add injections here
+      /*
+      'Assetic\Filter\Yui\CssCompressorFilter' => array(
+        'parameters' => array(
+          'jarPath'   => 'vendor/yalesov/yuicompressor/yuicompressor.jar',
+          'javaPath'  => '/usr/bin/java',
+        ),
+      ),
+      'Assetic\Filter\Yui\JsCompressorFilter' => array(
+        'parameters' => array(
+          'jarPath'   => 'vendor/yalesov/yuicompressor/yuicompressor.jar',
+          'javaPath'  => '/usr/bin/java',
+        ),
+      ),
+      'Assetic\Filter\CoffeeScriptFilter' => array(
+        'parameters' => array(
+          'coffeePath'  => '/usr/bin/coffee',
+          'nodePath'    => '/usr/bin/node',
+        ),
+      ),
+       */
     ),
+  ),
 );

@@ -1,35 +1,35 @@
 {
-    "name": "yalesov/zf2-assetwig",
-    "description": "Integrates Assetic and Twig to a ZF2 application",
-    "keywords": ["assetic", "twig", "zf2", "zendframework", "asset management"],
-    "authors": [
-        {
-            "name": "Yulij Andreevich Lesov",
-            "email": "yalesov@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.3",
-        "yalesov/yaml": "2.*",
-        "yalesov/arg-validator": "2.*",
-        "kriswallsmith/assetic": "1.*",
-        "twig/twig": "1.9.*",
-        "twig/extensions": "1.0.*@dev"
-    },
-    "autoload": {
-        "psr-0": {
-            "Yalesov\\Assetwig": "src/"
-        }
-    },
-    "license": "ISC",
-    "homepage": "https://github.com/yalesov/zf2-assetwig",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/yalesov/zf2-assetwig"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/yalesov/zf2-assetwig/issues"
+  "name": "yalesov/zf2-assetwig",
+  "description": "Integrates Assetic and Twig to a ZF2 application",
+  "keywords": ["assetic", "twig", "zf2", "zendframework", "asset management"],
+  "authors": [
+    {
+      "name": "Yulij Andreevich Lesov",
+      "email": "yalesov@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "yalesov/yaml": "2.*",
+    "yalesov/arg-validator": "2.*",
+    "kriswallsmith/assetic": "1.*",
+    "twig/twig": "1.9.*",
+    "twig/extensions": "1.0.*@dev"
+  },
+  "autoload": {
+    "psr-0": {
+      "Yalesov\\Assetwig": "src/"
+    }
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/yalesov/zf2-assetwig",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/yalesov/zf2-assetwig"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/yalesov/zf2-assetwig/issues"
+  }
 }
